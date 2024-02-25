@@ -1,0 +1,67 @@
+main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+  background-color: #e4e9ee;
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+div {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 15px;
+
+  input {
+    flex-grow: 1;
+    border-bottom: 1px solid lightslategray;
+    background-color: transparent;
+    transition: all 250ms ease-in;
+    padding: 5px 3px;
+
+    &:active,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+ol.todoList {
+  padding: 5px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 0;
+  }
+
+  li + li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 1px;
+    border-top: 1px solid rgba(119, 136, 153, 0.5);
+  }
+}
+
+button {
+  padding: 5px 10px;
+  background-color: lightslategray;
+  color: #ffffff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 250ms ease-in;
+
+  &:hover {
+    background-color: #6f8091;
+  }
+}
